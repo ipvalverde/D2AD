@@ -1,13 +1,4 @@
- 
-         88  ad888888b,                     88  
-         88 d8"     "88                     88  
-         88         a8P                     88  
- ,adPPYb,88      ,d8P"  ,adPPYYba,  ,adPPYb,88  
-a8"    `Y88    a8P"     ""     `Y8 a8"    `Y88  
-8b       88  a8P'       ,adPPPPP88 8b       88  
-"8a,   ,d88 d8"         88,    ,88 "8a,   ,d88  
- `"8bbdP"Y8 88888888888 `"8bbdP"Y8  `"8bbdP"Y8  
- 
+
  Discord 2 Active Directory
  
  Thanks for checking out my project, feel free to reach out on Discord J3ax#8367 in case of help needed with this integration, please remember this is just a small 
