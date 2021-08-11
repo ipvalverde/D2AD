@@ -54,7 +54,7 @@ powershell.invoke().then(result => {
             .setTitle('Active Directory Integration is up and running')
             .addField('Domain Name:',`${String(domainName)}`, true)
             .addField('Enrolled:', `${String(enrolled)}`, true)
-            client.channels.cache.get("874746481083559969").send(botSpawn);
+            client.channels.cache.get("CHANNEL-ID-HERE").send(botSpawn);
 
         })
     } 
@@ -108,5 +108,5 @@ client.on("message", msg => {
     
 
 
-  client.login("ODc0NzQ2MjE3MzIwNTUwNDIx.YRLc5g.J9-6QgdVH-tydejhuhjX6Zh0AaU");
+  client.login("BOT-TOKEN-HERE");
 
