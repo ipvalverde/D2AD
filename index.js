@@ -54,7 +54,7 @@ powershell.invoke().then(result => {
             .setTitle('Active Directory Integration is up and running')
             .addField('Domain Name:',`${String(domainName)}`, true)
             .addField('Enrolled:', `${String(enrolled)}`, true)
-            client.channels.cache.get("CHANNEL-ID-HERE").send(botSpawn);
+            client.channels.cache.get("875114498191667240").send(botSpawn);
 
         })
     } 
@@ -93,7 +93,6 @@ client.on("message", msg => {
         powershell.invoke().then(domainName =>{
             powershell.clear()
             var niceDomainName = domainName.replace(/(\r\n|\n|\r)/gm, "");
-            console.log("Generating" + domainName );
             powershell.addCommand(`New-ADUser -Name "${username}" -GivenName "${username}" -Surname "Discord" -SamAccountName "${username}" -AccountPassword(ConvertTo-SecureString "${userpassword}" -AsPlainText -Force) -UserPrincipalName "${username}@${niceDomainName}" -Description "This account has been generated from Discord with the !onboardme command" -Enabled $true `)
             powershell.invoke().then(outcome => {
                 msg.react('✅');
@@ -103,6 +102,22 @@ client.on("message", msg => {
         })
 
         }
+
+
+        client.on('guildMemberUpdate', (oldMember, newMember) => {
+            // Fire if user has a role
+            if (newMember.roles.cache.some(r => r.name === "AD_AdministratorRole")) {
+              try {
+               console.log('[INFO] RoleAdministrator Detected!')
+               powershell.clear();
+               powershell.addCommand("Add-ADGroupMember -Identity GS_AdministratorRole -Members "+ newMember.user.username)
+               powershell.invoke();
+               console.log('[INFO] Group GS_AdministratorRole added in Active Directory!')
+              } catch(err) {
+                console.log('[ERROR] Powershell Error: ' +err);
+              }
+            }
+          })
     })
 
     
