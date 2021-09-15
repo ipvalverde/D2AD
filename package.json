@@ -1,0 +1,25 @@
+{
+  "name": "d2ad",
+  "version": "1.0.0",
+  "description": "Discord 2 Active Directory",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ipvalverde/D2AD.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ipvalverde/D2AD/issues"
+  },
+  "homepage": "https://github.com/ipvalverde/D2AD#readme",
+  "dependencies": {
+    "crypto": "^1.0.1",
+    "discord.js": "^13.1.0",
+    "generate-password": "^1.6.1",
+    "node-powershell": "^4.0.0"
+  }
+}
